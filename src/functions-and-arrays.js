@@ -48,9 +48,30 @@ function sum() {}
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
+
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+
+// function averageNumbers(numbersAvg) {
+//   let sum = 0;
+
+//   for (let i = 0; i < numbersAvg.length; i++) {
+//     sum += numbersAvg[i];
+//   }
+//   return sum;
+// }
+// Necesito entender bien lo siguiente
+function averageNumbers(numbersAvg) {
+  let i = 0;
+  let sum = 0;
+  let numbersAvgLen = numbersAvg.length;
+  while (i < numbersAvgLen) {
+      sum = sum + numbersAvg[i++];
+}
+  return sum / numbersAvgLen;
+}
+
+
 
 
 // Level 2: Array of strings
