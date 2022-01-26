@@ -12,17 +12,20 @@ function maxOfTwoNumbers(num1, num2) {
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
 function findLongestWord(words) {
-
+  
   let longestWord = words[0];
-
+  
   for (let i = 0; i < words.length; i++) {
       if (words[i].length > longestWord.length) {
           longestWord = words[i];
-      }
+      } 
   }
-
+  if (words.length === 0){
+    return null;
+  }
   return longestWord;
 
+  
 }
 
 
@@ -52,23 +55,16 @@ function sum() {}
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 
-// function averageNumbers(numbersAvg) {
-//   let sum = 0;
-
-//   for (let i = 0; i < numbersAvg.length; i++) {
-//     sum += numbersAvg[i];
-//   }
-//   return sum;
-// }
-// Necesito entender bien lo siguiente
 function averageNumbers(numbersAvg) {
-  let i = 0;
-  let sum = 0;
-  let numbersAvgLen = numbersAvg.length;
-  while (i < numbersAvgLen) {
-      sum = sum + numbersAvg[i++];
+
+if (numbersAvg.length === 0){
+  return null;
 }
-  return sum / numbersAvgLen;
+
+let sumNumberArr = sumNumbers(numbersAvg) 
+
+return sumNumberArr / numbersAvg.length
+
 }
 
 
@@ -77,7 +73,25 @@ function averageNumbers(numbersAvg) {
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(wordsArr) {
+// paso 1 calular la cantidad de letras de cada string del array
+for (let word of wordsArr){
+  let sumLetras
+
+}
+//paso 2 sumar las letras
+
+//paso 3 dividirlos entre el numero de palabras
+
+
+ }
+
+
+// Me di por vencido en este    :(  :(  :(
+
+
+
+
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -97,14 +111,44 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+const uniquifyArray = (arr) => {
+
+  if (arr.length === 0){
+    return null;
+  }
+ 
+  const unicos = [];
+// no me salio hacerlo con indexOf
+// asi que lo hice con un loop normal
+  for(var i = 0; i < arr.length; i++) {
+ 
+    const elemento = arr[i];
+  
+// esto no llego a comprenderlo del todo aunque se cual es su significado
+// (supongo que es que no incluye) aunque no estoy seguro al 100%
+//      ||
+//      VV
+    if (!unicos.includes(arr[i])) {
+      unicos.push(elemento);
+    }
+  }
+  
+  return unicos;
+}
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(wordsFind, searchWord) {
+
+  if (wordsFind.length === 0) {
+    return null;
+  }
+
+  return wordsFind.includes(searchWord);
+}
 
 
 
